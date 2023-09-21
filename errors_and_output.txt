@@ -1,0 +1,21 @@
+Enter a topic or hashtag: Real-Time Social Media Sentiment Analyzer
+Analyzing tweets related to ''...
+
+Traceback (most recent call last):
+  File "C:\Users\Antho\temp.py", line 18, in fetch_tweets
+    for tweet in tweepy.Cursor(self.api.search, q=topic, tweet_mode='extended').items(100):
+                               ^^^^^^^^^^^^^^^
+AttributeError: 'API' object has no attribute 'search'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Antho\temp.py", line 61, in <module>
+    sentiment_analyzer.real_time_sentiment_analysis(topic)
+  File "C:\Users\Antho\temp.py", line 40, in real_time_sentiment_analysis
+    tweets = self.fetch_tweets(topic)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Antho\temp.py", line 20, in fetch_tweets
+    except tweepy.TweepError as e:
+           ^^^^^^^^^^^^^^^^^
+AttributeError: module 'tweepy' has no attribute 'TweepError'
